@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name = "format-detection" content = "telephone=no" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/loginstyle.css">
+    
+	<script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+    
+    
+    <!--[if lt IE 9]>
+    <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>  
+    <link rel="stylesheet" href="assets/tm/css/tm_docs.css" type="text/css" media="screen">
+    <script src="assets/assets/js/html5shiv.js"></script> 
+    <script src="assets/assets/js/respond.min.js"></script>
+  <![endif]-->
+  
+<script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
+<!-- <script src="script.js"></script> -->
+<script type="text/javascript">
+</script>
+</head>
+
+<body>
+<!--==============================header=================================-->
+<header id="header">
+      <div class="container">
+        <h1 class="navbar-brand navbar-brand_"><span id="logotxt">CareTakers For You</span><!--  <a href="index.html"><img alt="Grill point" src="img/logo.png"></a>--></h1>
+      </div>
+      <div class="menuheader">
+          <div class="container">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar" role="navigation">
+                <ul class="nav sf-menu">
+                  <li><a href="index.html">home</a>
+                   
+                  </li>
+                  <li><a href="AboutUs.html">About Us</a></li>
+                  <li><a href="Services.html">Services</a>
+                  <ul>
+                      <li><img src="img/arrowup.png" alt=""><a href="#">Pet Care</a></li>
+                      <li><a href="#">ChildCare</a></li>
+                      <li><a href="#">OldageCare</a></li>
+                      <li><a class="last" href="#">PlantCare</a>
+                        <ul>
+                           <li><a href="#">fresh</a></li>
+                           <li><a class="last" href="#">archive</a></li>                       
+                        </ul>
+                      </li>
+                  </ul>
+                  </li><!-- about me -->
+                  
+                  <li class="active"><a href="policy.html">Policy</a></li>
+                  <li><a href="index-4.html">location</a></li>
+                  <li><a href="LocationAnalysis.html">ChartView</a></li>
+                </ul>
+            </nav>
+          </div>
+      </div>
+</header>
+<!--==============================content=================================-->
+<div id="content">
+    <!--==============================row9=================================-->
+    <div class="row_9">
+        <div class="container">
+            <div class="row privacy_page">
+                
+                    <!--  <h2>Registration Guidelines</h2>
+                    <p> .</p>
+                    <p>Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultri cies pharetra magna. Donec accumsan male suada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                    <p>Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, Ut tellus dolor, dapibus cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</p>-->
+                </div> 
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+               <div style="border: 2px solid;border-radius: 25px;" align="center" >
+<table>
+<tr>
+<td colspan="2" align="center" ><h1>User Information</h1></td>
+</tr>
+</table>
+<br/>
+<table align="center">
+
+<form id="reg" name="reg" method="post" action="" enctype="multipart/form-data">
+
+<tr>
+<td>Profile Picture</td>
+<td>
+<img id="uploadPreview" style="width: 100px; height: 100px;" />
+<input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" /></td><td>
+<input type="submit" value="Upload" onclick="Upload();" />
+
+</td>
+</tr>
+
+<tr>
+<td>First Name</td><td><input type="text" id="first" name="first" placeholder="Enter first name"/></td>
+</tr>
+<tr>
+<td>Last Name</td><td><input type="text" id="last" name="last" placeholder="Enter last name"/></td>
+</tr>
+<tr>
+<td>Email</td><td><input type="text" id="email" name="email" value="" placeholder="abc@gmail.com" onblur ="isValidEmail()"/></td></tr>
+
+
+
+
+
+<tr>
+<td>Password</td><td><input type="password" id="pass" onkeyup="pwdStrength(this.value)" name="pass" /><a href="" title="Password must contain minimum 3 upper case, 2 lower case and 2 special characters"><img src="img/pass.jpeg" alt="question"  height="15px" width="15px"/></a></td>
+<td>
+<progress id="pbar" value="20" max="100" style="display:none;"></progress><label id="strength" style="display:none;"></label>
+</td>
+</tr>
+<tr>
+<td>Confirm Password</td><td><input type="password" id="cpass" name="cpass" placeholder="Must be same as password" onblur="checkpass(this.value)"/></td>
+</tr>
+<tr>
+<td>Address</td><td><input type="text" id="address1" name="address1" placeholder="Enter Address" /></td>
+</tr>
+
+<tr>
+<td>City</td>
+<td>
+<select name="cities" id="cities" onChange="go()">
+				<option value="">--Select City--</option>	
+                <option value="San Jose" selected>SAN JOSE</option>
+                <option value="San Diego">SAN DIEGO</option>
+                <option value="Los Angeles">LOS ANGELES</option>
+                <option value="San Francisco">SAN FRANCISCO</option>
+                <option value="Sacramento">SACRAMENTO</option>
+        </select>
+           
+        
+       
+ </td>      
+</tr>
+<tr><td>State</td><td>CALIFORNIA</td>
+<tr>
+<td>PinCode</td><td><input type="text" id="pin" name="pin" placeholder="Enter Pincode" /></td>
+</tr>
+<tr><td>&nbsp;&nbsp;</td></tr>
+<tr>
+
+<td>Identity Proof</td>
+<td>
+
+<input type="radio" id="passport" name="idproof" value="P" onclick="proofvalue();"/>&nbsp;Passport &nbsp;<input type="radio" id="liscence" name="idproof" value="L"/>&nbsp;License &nbsp;<input type="radio" id="stateid" name="idproof" value="S"/>&nbsp;StateID
+
+</td></tr>
+<tr><td>&nbsp;&nbsp;</td></tr>
+<tr>
+<td>Upload Proof</td>
+<td>
+<img id="uploadPreview" style="width: 100px; height: 100px;" />
+<input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" /></td><td>
+<input type="submit" value="Upload" onclick="Upload();" />
+
+</td>
+</tr>
+<tr><td>&nbsp;&nbsp;</td></tr>
+<tr>
+<td>Account Type</td><td><input type="radio" onclick="showreco();" id="caretaker" name="account" value="C"/>&nbsp;CareTaker &nbsp;<input type="radio" onclick="showreco();" id="careseeker" name="account" value="U"/>&nbsp;CareSeeker 
+
+
+</td>
+</tr>
+
+<tr>
+<td>Service Type</td>
+<td>
+<input type="checkbox" name="servicetype" value="plants">Plants<br>
+<input type="checkbox" name="servicetype" value="pets" >Pets<br>
+<input type="checkbox" name="servicetype" value="children" >Children<br>
+<input type="checkbox" name="servicetype" value="elders" >Elders<br>
+
+
+</td>      
+</tr>
+<tr>
+<td>
+<div id="reco" style="visibility:hidden" >
+Recommendations&nbsp;<input type="file" id="files" name="files[]" multiple />
+<output id="list"></output>
+
+</div>
+</td>
+</tr>
+<tr><td>&nbsp;&nbsp;</td></tr>
+<tr>
+<td style="width: 200px" >
+<div id="availability" style="visibility:hidden">
+Availability <br> <br> FROM <br> <input type="date" required id="fromdate" name="fromdate" /> <br>  TO <br> <input type="date" required id="todate" name="todate" /> 
+</div>
+</td>
+</tr>
+<tr><td>&nbsp;&nbsp;&nbsp;</td></tr>
+<tr><td><button type="button" class="btn btn_red">REGISTER</button></td>
+<td><a href="ListView.html" class="btn btn_red">CANCEL</a></td></tr>
+<tr><td></td></tr>
+
+<br/>
+</form>
+</table>
+<br/><br/>
+
+</div>
+</div>
+</div>
+</div>
+<script>
+
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+  
+</script>
+<script type="text/javascript">
+
+var geocoder = new google.maps.Geocoder();
+function isValidEmail(){
+	var emailAdd=document.getElementById("email").value;
+	var emailPattern = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+		if(emailAdd.match(emailPattern)){
+		alert('Email is Valid');
+		return true; 
+	}
+	else{
+		alert('Email is NOT VALID. Please match the requested format (abc@example.com)');
+		return false;
+	}
+}
+
+function checkpass(p)
+{
+	var orgp=document.getElementById('pass').value;
+	if(p!=orgp)
+		{ 
+		
+		alert("passwords do not match");
+		}
+	}
+
+	    
+
+var reqObject = {};
+
+function go(){
+
+	var sel = document.getElementById('cities');
+	 var cities = sel.options[sel.selectedIndex].value;
+	 alert(cities);
+	 reqObject["cities"] = cities;
+	 codeAddress();
+}
+
+$("input:radio[name=idproof]").click(function() {
+    var prooftype = $('input[name="idproof"]:checked').val();
+	 reqObject["prooftype"] = prooftype;
+});
+
+function PreviewImage() {
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+    oFReader.onload = function (oFREvent) {
+        document.getElementById("uploadPreview").src = oFREvent.target.result;
+    };
+};
+
+function Upload()
+{
+
+var filename = document.getElementById("uploadImage").value;
+console.log("the file name is " + filename);
+var storepath = "D:\pics";
+
+
+}
+
+$("input:radio[name=account]").click(function() {
+    var account = $('input[name="account"]:checked').val();
+    reqObject["account"] = account;
+});
+
+function showreco() {
+    if (document.getElementById('caretaker').checked) {
+        document.getElementById('reco').style.visibility = 'visible';
+    } else {
+        document.getElementById('reco').style.visibility = 'hidden';
+    }
+
+    if (document.getElementById('caretaker').checked) {
+        document.getElementById('availability').style.visibility = 'visible';
+    } 
+    else {
+        document.getElementById('availability').style.visibility ='hidden';
+    }
+};
+
+
+$("input:checkbox[name=servicetype]").click(function() {
+    var service = $("input[type='checkbox']:checked").val();
+    reqObject["service"] = service;
+    
+});
+
+$.fn.serializeObject = function()
+	{
+	    var o = {};
+	    var a = this.serializeArray();
+	    $.each(a, function() {
+	        if (o[this.name] !== undefined) {
+	            if (!o[this.name].push) {
+	                o[this.name] = [o[this.name]];
+	            }
+	            o[this.name].push(this.value || '');
+	        } else {
+	            o[this.name] = this.value || '';
+	        }
+	    });
+	    return o;
+	};
+	
+	function codeAddress() {
+		  var address = document.getElementById('address1').value;
+		  var address2 = address+','+reqObject["cities"]+','+'CA';
+		  geocoder.geocode( { 'address': address2}, function(results, status) {
+		    if (status == google.maps.GeocoderStatus.OK) {
+		    	var latitude = results[0].geometry.location.lat();
+				var longitude = results[0].geometry.location.lng();
+			    
+			    reqObject["coord"] = latitude+','+longitude;
+		    } 
+		  });
+		}
+	
+	$(function() {
+		$("button").click(function() {
+			
+			var address1 = $('#address1').val();
+		
+			var first = $('#first').val();
+			reqObject["first"] = first;
+			var last = $('#last').val();
+			reqObject["last"] = last;
+			var email = $('#email').val();
+			reqObject["email"] = email;
+			var pass = $('#pass').val();
+			reqObject["pass"] = pass;
+			
+			reqObject["address1"] = address1;
+			var pin = $('#pin').val();
+			reqObject["pin"] = pin;
+			var fromdate = $('#fromdate').val();
+			reqObject["fromdate"] = fromdate;
+			var todate = $('#todate').val();
+			reqObject["todate"] = todate;
+	    	
+	    	var reqjson = JSON.stringify(reqObject);
+	    	alert(reqjson);
+	    	
+	    	$.ajax({
+	    	    url : 'rest/insertFormpage/insertReg',
+	    	    type: 'POST',
+	    	    data : reqjson,
+	    	    contentType: 'application/json; charset=utf-8',
+	    	    dataType : 'json',
+	    	    processData: true,
+	    	    async: false,
+	    	    success: function(data)
+	    	    {
+	    	        //data - response from server
+	    	       
+	    	    	alert("Registration successful.");
+	    	    	
+	    	    },
+	    	    error: function()
+	    	    {
+	    	    	alert("Registration successful");
+	    	    }
+	    	});
+	    	
+	    });
+	    	
+	    	
+	   
+	});
+	
+
+	   // });
+</script>
+
+<!--==============================footer=================================-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <ul class="social_icons clearfix">
+                     <li><a href="http://www.facebook.com/sharer.php?u=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" target="_blank" title="Share this page on Facebook"><img src="img/follow_icon1.png" alt=""></a></li>
+                     <li><a href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" target="_blank" title="Plus one this page on Google"><img src="img/follow_icon2.png" alt=""></a></li>
+                     <li><a href="http://twitter.com/share?url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" target="_blank" title="Tweet this page on Twitter"><img src="img/follow_icon3.png" alt=""></a></li>
+                   
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footerlogo footercol">
+                <a class="smalllogo2 logo" href="index.html"><span id="logotxtfoot">CareTakers For You</span><!--  <img src="img/logofooter.png" alt="">--></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <p class="footerpriv">&copy; 2013 &bull; <a class="privacylink" href="index-5.html">Privacy policy</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+<!--Coded by corvus-->
+</body>
+</html>
+
+
+

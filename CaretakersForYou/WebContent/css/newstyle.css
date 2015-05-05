@@ -1,0 +1,53 @@
+#logotxt
+  {
+  font-size:43pt;
+  color:#f4cccc;
+  font-family:"Monotype Corsiva";
+  font-style: italic;
+
+  }
+  #logotxtfoot
+  {
+  font-size:23pt;
+  color:#f4cccc;
+  /*color:#99CC00;*/
+  font-family:"Monotype Corsiva";
+  font-style: italic;
+  
+
+  }
+  .camera_wrap
+  {
+  height:600px;
+  }
+  
+ /* table{
+ width: 100%;
+  
+  }*/
+  #listview
+  {
+   /*width: 100%;*/
+  }
+  th
+  {
+  background-color:#5bb4d6;
+  }
+  
+  #profilepic
+  {
+  height:25px;
+  width:25px;
+  }
+  
+  #stars
+  {
+  height:20px;
+  width:20px;
+  }
+  
+  #chart_div
+  {
+  margin-left:200px;
+  }
+  

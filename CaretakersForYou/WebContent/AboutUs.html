@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us</title>
+	<style>
+		
+		img.bg {
+			
+			/* Set up proportionate scaling */
+			width: 100%;
+			height: 80%;
+			
+			/* Set up positioning */
+			position: absolute;
+			background-position:center;
+			opacity: 0.4;
+    		filter: alpha(opacity=40);
+		}
+		
+		@media screen and (max-width: 1024px){
+			img.bg {
+				left: 50%;
+				margin-left: -512px; }
+		}
+		
+	</style>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name = "format-detection" content = "telephone=no" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    
+	<script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+  
+    
+    
+    <!--[if lt IE 9]>
+    <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>  
+    <link rel="stylesheet" href="assets/tm/css/tm_docs.css" type="text/css" media="screen">
+    <script src="assets/assets/js/html5shiv.js"></script> 
+    <script src="assets/assets/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<!--==============================header=================================-->
+<header id="header">
+      <div class="container">
+        <h1 class="navbar-brand navbar-brand_"><span id="logotxt">CareTakers For You</span><!--  <a href="index.html"><img alt="Grill point" src="img/logo.png"></a>--></h1>
+      </div>
+      <div class="menuheader">
+          <div class="container">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar" role="navigation">
+                <ul class="nav sf-menu">
+                  <li><a href="index.html">home</a>
+                   
+                  </li>
+                  <li class="active"><a href="AboutUs.html">About Us</a></li>
+                  <li><a href="Services.html">Services</a>
+                  <ul>
+                      <li><img src="img/arrowup.png" alt=""><a href="#">Pet Care</a></li>
+                      <li><a href="#">ChildCare</a></li>
+                      <li><a href="#">OldageCare</a></li>
+                      <li><a class="last" href="#">PlantCare</a>
+                        <ul>
+                           <li><a href="#">fresh</a></li>
+                           <li><a class="last" href="#">archive</a></li>                       
+                        </ul>
+                      </li>
+                  </ul>
+                  </li><!-- about me -->
+                  <!-- <li><a href="index-2.html">gallery</a></li>-->
+                  <li><a href="policy.html">Policy</a></li>
+                  <li><a href="index-4.html">location</a></li>
+                  <li><a href="LocationAnalysis.html">ChartView</a></li>
+                </ul>
+            </nav>
+          </div>
+      </div>
+</header>
+
+<!--==============================content=================================-->
+<div id="content">
+	<img src="img/Desktop.jpg" class="bg">
+
+    <!--==============================row9=================================-->
+    <div class="row_9">
+        <div class="container">
+            <div class="row privacy_page">
+                 
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <h2>CareTakers For You</h2>
+                    <h4>Do you need a care taker whom you can safely trust?</h4>
+                    We provide a means for you to search for care takers that meet all your criteria. 
+                     We have the best recommendation system that would exceed your expectations. 
+                     We have the best features in place that will help you search for the perfect care taker.
+	                <h3>The features that we are currently offering are:</h3>
+                    <ol><li>Detailed profiles of potential candidates</li>
+                    <li>Recommendations based on likings, previous selections and based on similarity to other users.</li>
+                    <li>Refine search by setting a limit for the minimum rating that they require the caretaker to have.</li>
+                    <li>Verified authenticity and merit of the caretakers by requesting their certifications during signup.</li>
+                    <li>Review based services and rating system.</li></ol>
+                 
+                    <p>E-mail: <a href="#" class="privacy_link">contactus@caretakers.com</a></p>
+                </div> 
+             </div> 
+        </div>
+    </div>
+</div>
+<!--==============================footer=================================-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <ul class="social_icons clearfix">
+                     <li><a href="http://www.facebook.com/sharer.php?u=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" target="_blank" title="Share this page on Facebook"><img src="img/follow_icon1.png" alt=""></a></li>
+                     <li><a href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" target="_blank" title="Plus one this page on Google"><img src="img/follow_icon2.png" alt=""></a></li>
+                     <li><a href="http://twitter.com/share?url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>" target="_blank" title="Tweet this page on Twitter"><img src="img/follow_icon3.png" alt=""></a></li>
+                   
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footerlogo footercol">
+                <a class="smalllogo2 logo" href="index.html"><span id="logotxtfoot">CareTakers For You</span><!--  <img src="img/logofooter.png" alt="">--></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footercol">
+                <p class="footerpriv">&copy; 2013 &bull; <a class="privacylink" href="index-5.html">Privacy policy</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+<!--Coded by corvus-->
+</body>
+</html>
